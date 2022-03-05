@@ -4,8 +4,10 @@ import java.io.FileInputStream;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class BaseUI {
@@ -19,12 +21,19 @@ public class BaseUI {
 			System.setProperty("webdriver.chrome.driver",
 					System.getProperty("user.dir") + "\\src\\test\\resources\\Drivers\\chromedriver.exe");
 			driver = new ChromeDriver();
-		} else if (Browser.equalsIgnoreCase("Mozila")) {
+		} 
+		else if (Browser.equalsIgnoreCase("Mozila")) {
 			System.setProperty("webdriver.gecko.driver",
 					System.getProperty("user.dir") + "\\src\\test\\resources\\Drivers\\geckodriver.exe");
-			driver = new FirefoxDriver();
-			driver.manage().timeouts().implicitlyWait(180, TimeUnit.SECONDS);
+			driver = new FirefoxDriver();	
 		}
+		else if(Browser.equalsIgnoreCase("edge")) {
+			System.setProperty("webdriver.edge.driver",
+					System.getProperty("user.dir") + "\\src\\test\\resources\\Drivers\\msedgedriver.exe");
+			driver = new EdgeDriver();
+		}
+		
+		driver.manage().timeouts().implicitlyWait(180, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().pageLoadTimeout(180, TimeUnit.SECONDS);
 
@@ -39,22 +48,24 @@ public class BaseUI {
 				e.printStackTrace();
 			}
 		}
-
 	}
-	
+
 	public void getURL(String URL) {
 		driver.get(prop.getProperty(URL));
 	}
-	//Close the tab
-		public void tearDown() {
-			driver.close();
 
-		}
+	// Close the tab
+	public void tearDown() {
+		driver.close();
+	}
 
-	//Quit the browser
-		public void quitBrowser() {
-			driver.quit();
+	// Quit the browser
+	public void quitBrowser() {
+		driver.quit();
+	}
 
-		}
-
+	//Click method
+	public void click(String xpath) {
+		driver.findElement(By.xpath(xpath)).click();
+	}
 }
