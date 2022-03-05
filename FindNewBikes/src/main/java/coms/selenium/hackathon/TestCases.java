@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 public class TestCases extends BaseUI{
 	@Test
 	public void testOne() {
-		getDriver("chrome");
+		getDriver("mozila");
 		getURL("URL");
 		tearDown();
 		
