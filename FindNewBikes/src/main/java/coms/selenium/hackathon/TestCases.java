@@ -9,11 +9,10 @@ import com.aventstack.extentreports.Status;
 import com.hackathon.util.ExtentReportManager;
 
 public class TestCases extends BaseUI{
-	ExtentReports report=ExtentReportManager.getReportInstance();
+	
 	@Test
 	public void testOne() {
-		
-		ExtentReports report=ExtentReportManager.getReportInstance();
+		report=ExtentReportManager.getReportInstance();
 		ExtentTest logger = report.createTest("test One");
 		logger.log(Status.INFO, "Open The Browser");
 		getDriver("mozila");
@@ -22,7 +21,7 @@ public class TestCases extends BaseUI{
 		logger.log(Status.INFO, "Quit the Browser Tab");
 		tearDown();
 		logger.log(Status.PASS, "All test cases pass successfully");
-		
+		takeScreenShotOnFailure();
 	}
 	@AfterMethod
 	public void endBrowser() {
