@@ -65,13 +65,13 @@ public class BaseUI {
 			}
 		}
 	}
-	public void upcomingBike(String newBike) throws InterruptedException {
+	public void upcomingBike(String newBike,String upcomingBike) throws InterruptedException {
 		
 		WebElement newBikeLink=driver.findElement(By.xpath(prop.getProperty(newBike)));
 		Actions action = new Actions(driver);
 		action.moveToElement(newBikeLink).build().perform();
 		// use explicit wait in future
-		WebElement upcomingBikes = driver.findElement(By.xpath(prop.getProperty(newBike)));
+		WebElement upcomingBikes = driver.findElement(By.xpath(prop.getProperty(upcomingBike)));
 		upcomingBikes.click();
 		//Thread.sleep(40000);
 		
