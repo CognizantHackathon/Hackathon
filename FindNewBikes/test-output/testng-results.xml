@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-03-08T10:33:04 IST" name="Default suite" finished-at="2022-03-08T10:33:31 IST" duration-ms="27371">
+  <suite started-at="2022-03-08T11:04:36 IST" name="Default suite" finished-at="2022-03-08T11:05:05 IST" duration-ms="28989">
     <groups>
     </groups>
-    <test started-at="2022-03-08T10:33:04 IST" name="Default test" finished-at="2022-03-08T10:33:31 IST" duration-ms="27371">
+    <test started-at="2022-03-08T11:04:36 IST" name="Default test" finished-at="2022-03-08T11:05:05 IST" duration-ms="28989">
       <class name="coms.selenium.hackathon.TestCases">
-        <test-method signature="testOne()[pri:0, instance:coms.selenium.hackathon.TestCases@7b4c50bc]" started-at="2022-03-08T10:33:04 IST" name="testOne" finished-at="2022-03-08T10:33:22 IST" duration-ms="18587" status="PASS">
+        <test-method signature="testOne()[pri:0, instance:coms.selenium.hackathon.TestCases@58e1d9d]" started-at="2022-03-08T11:04:36 IST" name="testOne" finished-at="2022-03-08T11:04:52 IST" duration-ms="16566" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testOne -->
-        <test-method is-config="true" signature="endBrowser()[pri:0, instance:coms.selenium.hackathon.TestCases@7b4c50bc]" started-at="2022-03-08T10:33:22 IST" name="endBrowser" finished-at="2022-03-08T10:33:23 IST" duration-ms="273" status="PASS">
+        <test-method is-config="true" signature="endBrowser()[pri:0, instance:coms.selenium.hackathon.TestCases@58e1d9d]" started-at="2022-03-08T11:04:52 IST" name="endBrowser" finished-at="2022-03-08T11:04:53 IST" duration-ms="310" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endBrowser -->
-        <test-method signature="testTwo()[pri:0, instance:coms.selenium.hackathon.TestCases@7b4c50bc]" started-at="2022-03-08T10:33:23 IST" name="testTwo" finished-at="2022-03-08T10:33:31 IST" depends-on-methods="coms.selenium.hackathon.TestCases.testOne" duration-ms="8408" status="PASS">
+        <test-method signature="testTwo()[pri:0, instance:coms.selenium.hackathon.TestCases@58e1d9d]" started-at="2022-03-08T11:04:53 IST" name="testTwo" finished-at="2022-03-08T11:05:05 IST" depends-on-methods="coms.selenium.hackathon.TestCases.testOne" duration-ms="11984" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testTwo -->
-        <test-method is-config="true" signature="endBrowser()[pri:0, instance:coms.selenium.hackathon.TestCases@7b4c50bc]" started-at="2022-03-08T10:33:31 IST" name="endBrowser" finished-at="2022-03-08T10:33:31 IST" duration-ms="57" status="PASS">
+        <test-method is-config="true" signature="endBrowser()[pri:0, instance:coms.selenium.hackathon.TestCases@58e1d9d]" started-at="2022-03-08T11:05:05 IST" name="endBrowser" finished-at="2022-03-08T11:05:05 IST" duration-ms="72" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endBrowser -->
