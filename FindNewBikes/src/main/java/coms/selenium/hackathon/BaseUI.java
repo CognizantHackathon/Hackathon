@@ -6,9 +6,11 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -16,7 +18,7 @@ import com.hackathon.util.ExtentReportManager;
 
 public class BaseUI {
 
-	public static WebDriver driver = null;
+	public static WebDriver driver ;
 	public Properties prop;
 	public ExtentReports report = ExtentReportManager.getReportInstance();
 	public ExtentTest logger;
@@ -52,6 +54,19 @@ public class BaseUI {
 				e.printStackTrace();
 			}
 		}
+	}
+	public void upcomingBike(String newBike) throws InterruptedException {
+		
+		WebElement newBikeLink=driver.findElement(By.xpath(prop.getProperty(newBike)));
+		Actions action = new Actions(driver);
+		action.moveToElement(newBikeLink).build().perform();
+		// use explicit wait in future
+		WebElement upcomingBikes = driver.findElement(By.xpath(prop.getProperty(newBike)));
+		upcomingBikes.click();
+		//Thread.sleep(40000);
+		
+	
+		
 	}
 
 	public void getURL(String URL) {
