@@ -10,16 +10,19 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -28,11 +31,11 @@ import com.hackathon.util.ExtentReportManager;
 import java.time.Duration;
 import org.testng.Assert;
 
-
 import com.hackathon.util.DateUtil;
+
 public class BaseUI {
 
-	public static WebDriver driver ;
+	public static WebDriver driver;
 	public Properties prop;
 
 	public ExtentReports report = ExtentReportManager.getReportInstance();
@@ -41,9 +44,11 @@ public class BaseUI {
 	public void getDriver(String Browser) {
 
 		if (Browser.equalsIgnoreCase("Chrome")) {
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("--disable-notifications");
 			System.setProperty("webdriver.chrome.driver",
 					System.getProperty("user.dir") + "\\src\\test\\resources\\Drivers\\chromedriver.exe");
-			driver = new ChromeDriver();
+			driver = new ChromeDriver(options);
 		} else if (Browser.equalsIgnoreCase("Mozila")) {
 			System.setProperty("webdriver.gecko.driver",
 					System.getProperty("user.dir") + "\\src\\test\\resources\\Drivers\\geckodriver.exe");
@@ -69,22 +74,37 @@ public class BaseUI {
 			}
 		}
 	}
+
 	public void hoverMouse(String Xpath) {
 		try {
-		WebElement ElementLink=driver.findElement(By.xpath(prop.getProperty(Xpath)));
-		Actions action = new Actions(driver);
-		action.moveToElement(ElementLink).build().perform();
-		}
-		catch(Exception e){
+			WebElement ElementLink = driver.findElement(By.xpath(prop.getProperty(Xpath)));
+			Actions action = new Actions(driver);
+			action.moveToElement(ElementLink).build().perform();
+		} catch (Exception e) {
 			reportFail(e.getMessage());
 			e.printStackTrace();
 			Assert.fail("Failing the TestCase : " + e.getMessage());
-		}	
+		}
 	}
-	
+
+	public void selectFromDropDown(String Xpath, String option) {
+		try {
+			Select select = new Select(driver.findElement(By.xpath(Xpath)));
+			select.selectByVisibleText(option);
+		} catch (Exception e) {
+			reportFail(e.getMessage());
+			e.printStackTrace();
+			Assert.fail("Failing the TestCase : " + e.getMessage());
+		}
+	}
+
 	public void explicitWait(String xpath) {
-		WebDriverWait wait = new WebDriverWait(driver, 30); 
+		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath(xpath))));
+	}
+
+	public void newBike(String newBike) {
+
 	}
 
 	public void getURL(String URL) {
@@ -102,14 +122,15 @@ public class BaseUI {
 	}
 
 	// Click method
-	public void click(String xpath) {
-		driver.findElement(By.xpath(xpath)).click();
+	public void click(String XpathClick) {
+		driver.findElement(By.xpath(XpathClick)).click();
+
 	}
 
 	// Get Element Method
 	public WebElement getElement(String locatorkey) {
 		WebElement element = null;
-		
+
 		try {
 			if (locatorkey.endsWith("_Xpath")) {
 				element = driver.findElement(By.xpath(prop.getProperty(locatorkey)));
@@ -144,18 +165,29 @@ public class BaseUI {
 	public void reportPass(String reportString) {
 
 	}
-	
-	//Take ScreenShot
+
+	// Take ScreenShot
 	public void takeScreenShotOnFailure() {
-		TakesScreenshot takeScreenShot = (TakesScreenshot)driver;
+		TakesScreenshot takeScreenShot = (TakesScreenshot) driver;
 		File SourceFile = takeScreenShot.getScreenshotAs(OutputType.FILE);
-		File destFile = new File(System.getProperty("user.dir") + "\\target\\Screenshots\\" + DateUtil.getTimeStamp() + ".png");
+		File destFile = new File(
+				System.getProperty("user.dir") + "\\target\\Screenshots\\" + DateUtil.getTimeStamp() + ".png");
 		try {
-			FileUtils.copyFile(SourceFile,destFile);
-			logger.addScreenCaptureFromPath(System.getProperty("user.dir") + "\\target\\Screenshots\\" + DateUtil.getTimeStamp() + ".png");
+			FileUtils.copyFile(SourceFile, destFile);
+			logger.addScreenCaptureFromPath(
+					System.getProperty("user.dir") + "\\target\\Screenshots\\" + DateUtil.getTimeStamp() + ".png");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
+
+	}
+
+	/********* Scroll Down page ***************/
+	public void pageScrollDown() {
+
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+
+		js.executeScript("window.scrollBy(0,800)");
+
 	}
 }
