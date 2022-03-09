@@ -33,19 +33,6 @@ public class TestCases extends BaseUI {
 
 	}
 
-	@Test
-	public void testTwo() throws InterruptedException {
-		logger = report.createTest("test Two");
-		report = ExtentReportManager.getReportInstance();
-		ExtentTest logger = report.createTest("test Two");
-		logger.log(Status.INFO, "Open The Browser");
-		getDriver("chrome");
-		logger.log(Status.INFO, "Open The Site URL");
-		getURL("URL");
-		logger.log(Status.INFO, "UsedCar and selectChennai");
-		UsedCar(" usedCar_Xpath", "Chennai_Xpath");
-		quitBrowser();
-	}
 
 	@AfterMethod
 	public void endBrowser() {
