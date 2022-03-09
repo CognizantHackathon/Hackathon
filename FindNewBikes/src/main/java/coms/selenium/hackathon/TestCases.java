@@ -30,10 +30,13 @@ public class TestCases extends BaseUI{
 		getDriver("chrome");
 		logger.log(Status.INFO, "Open The Site URL");
 		getURL("URL");
+		mouseover("newBike_Xpath","UpcommingBike_Xpath");
+		DropDown("dropdown_Xpath");
 //		click("newBike_Xpath");
-		getElement("newBike_Xpath").click();
-		pageScrollDown();
-		getElement("UpcommingBike_Xpath").click();
+		//getElement("newBike_Xpath").click();
+		//pageScrollDown();
+		//getElement("UpcommingBike_Xpath").click();
+	
 		
 		
 		

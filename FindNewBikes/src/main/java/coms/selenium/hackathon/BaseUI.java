@@ -102,10 +102,30 @@ public class BaseUI {
 		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath(xpath))));
 	}
-
 	public void newBike(String newBike) {
 
 	}
+	
+	//mouseover
+	public void mouseover(String newBike_Xpath,String UpcommingBike_Xpath) throws InterruptedException {
+	WebElement mainMenu= getElement(newBike_Xpath);
+	//WebElement mainMenu = driver.findElement(By.xpath("//*[@id=\"headerNewNavWrap\"]/nav/div/ul/li[3]/a"));
+	Actions actions = new Actions(driver);
+	actions.moveToElement(mainMenu).perform();
+	
+	WebElement subMenu = getElement(UpcommingBike_Xpath);
+	actions.moveToElement(subMenu);
+	actions.click().build().perform();
+	Thread.sleep(5000);
+	}
+	//dropdown
+	public void DropDown(String dropdown_Xpath) {
+		WebElement drpdown=getElement(dropdown_Xpath);
+		Select name = new Select(drpdown);
+		name.selectByVisibleText("Honda");
+	}
+	
+
 
 	public void getURL(String URL) {
 		driver.get(prop.getProperty(URL));
