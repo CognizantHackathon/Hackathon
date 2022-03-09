@@ -23,7 +23,7 @@ public class TestCases extends BaseUI{
 		logger.log(Status.INFO, "Open The Site URL");
 		getURL("URL");
 		logger.log(Status.INFO, "Click on element");
-		upcomingBike("newBike","upcomingBike");
+		upcomingBike("newBike_Xpath","upcomingBike_Xpath");
 		logger.log(Status.INFO, "Quit the Browser Tab");
 		tearDown();
 		logger.log(Status.PASS, "All test cases pass successfully");
@@ -37,7 +37,7 @@ public class TestCases extends BaseUI{
 		logger.log(Status.INFO, "Open The Site URL");
 		getURL("URL");
 		logger.log(Status.INFO, "Click on WebElement(Upcoming Bike)");
-		upcomingBike("newBike","upcomingBike");
+		upcomingBike("newBike_Xpath","upcomingBike_Xpath");
 		logger.log(Status.INFO, "taking screenshot");
 		takeScreenShotOnFailure();
 		logger.log(Status.INFO, "Quit the Browser Tab");
