@@ -32,10 +32,30 @@ public class TestCases extends BaseUI{
 		getURL("URL");
 		mouseover("newBike_Xpath","UpcommingBike_Xpath");
 		DropDown("dropdown_Xpath");
-//		click("newBike_Xpath");
-		//getElement("newBike_Xpath").click();
-		//pageScrollDown();
-		//getElement("UpcommingBike_Xpath").click();
+		Thread.sleep(5000);
+		UsedCar("usedCar_Xpath","Chennai_Xpath");
+		logger.log(Status.INFO, "Quit the Browser Tab");
+		tearDown();
+		logger.log(Status.PASS, "All test cases pass successfully");
+
+	}
+//
+//@Test
+//	public void testTwo() throws InterruptedException {
+//		logger = report.createTest("test Two");
+//		report=ExtentReportManager.getReportInstance();
+//		ExtentTest logger = report.createTest("test Two");
+//	
+//		logger.log(Status.INFO, "Open The Browser");
+//		getDriver("chrome");
+//		logger.log(Status.INFO, "Open The Site URL");
+//		getURL("URL");
+//		logger.log(Status.INFO, "UsedCar and selectChennai");
+//		UsedCar(" usedCar_Xpath", "Chennai_Xpath");
+//		quitBrowser();
+//		
+//	}
+	
 	
 		
 		
@@ -43,41 +63,9 @@ public class TestCases extends BaseUI{
 		
 		
 		
-		
-//		logger.log(Status.INFO,"Login with Google");
-//		click("LoginGoogle_Xpath");
-//		//logger.log(Status.INFO, "Click on element");
-//		Thread.sleep(20000);
-////		explicitWait("PopUp_Xpath");
-//		click("PopUp_Xpath");
-//		hoverMouse("newBike_Xpath");
-//		explicitWait("upcomingBike_Xpath");
-//		hoverMouse("upcomingBike_Xpath");
-//		click("upcomingBike_Xpath");
-		Thread.sleep(5000);
-		logger.log(Status.INFO, "Quit the Browser Tab");
-		tearDown();
-		logger.log(Status.PASS, "All test cases pass successfully");
 
-	}
-//	@Test(dependsOnMethods="testOne")
-//	public void testTwo() throws InterruptedException {
-//		logger = report.createTest("test One");
-//		logger.log(Status.INFO, "Open The Browser");
-//		getDriver("chrome");
-//		logger.log(Status.INFO, "Open The Site URL");
-//		getURL("URL");
-//		logger.log(Status.INFO, "Click on WebElement(Upcoming Bike)");
-//		hoverMouse("newBike_Xpath");
-//		Thread.sleep(3000);
-//		logger.log(Status.INFO, "taking screenshot");
-//		takeScreenShotOnFailure();
-//		logger.log(Status.INFO, "Quit the Browser Tab");
-//		quitBrowser();
-//		logger.log(Status.PASS, "All test cases pass successfully");
-//	}
+	
 		
-
 	@AfterMethod
 	public void endBrowser() {
 		report.flush();

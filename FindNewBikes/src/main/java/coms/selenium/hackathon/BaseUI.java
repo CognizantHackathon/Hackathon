@@ -112,7 +112,7 @@ public class BaseUI {
 	//WebElement mainMenu = driver.findElement(By.xpath("//*[@id=\"headerNewNavWrap\"]/nav/div/ul/li[3]/a"));
 	Actions actions = new Actions(driver);
 	actions.moveToElement(mainMenu).perform();
-	
+	Thread.sleep(3000);
 	WebElement subMenu = getElement(UpcommingBike_Xpath);
 	actions.moveToElement(subMenu);
 	actions.click().build().perform();
@@ -125,7 +125,16 @@ public class BaseUI {
 		name.selectByVisibleText("Honda");
 	}
 	
-
+	public void UsedCar(String usedCar_Xpath,String Chennai_Xpath) throws InterruptedException {
+	WebElement usdCar=getElement(usedCar_Xpath);
+	Actions actions = new Actions(driver);
+	actions.moveToElement(usdCar).perform();
+	Thread.sleep(3000);
+	WebElement chnCar = getElement(Chennai_Xpath);
+	actions.moveToElement(chnCar);
+	actions.click().build().perform();
+	Thread.sleep(3000);
+	}
 
 	public void getURL(String URL) {
 		driver.get(prop.getProperty(URL));
