@@ -4,7 +4,6 @@ import java.io.File;
 
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.time.Duration;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -28,7 +27,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.hackathon.util.ExtentReportManager;
-import java.time.Duration;
 import org.testng.Assert;
 
 import com.hackathon.util.DateUtil;
