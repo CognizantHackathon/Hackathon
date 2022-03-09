@@ -4,6 +4,7 @@ import java.io.File;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -133,6 +134,26 @@ public class BaseUI {
 	actions.click().build().perform();
 	Thread.sleep(3000);
 	}
+	
+	//display list of bike
+	public void listelement() throws InterruptedException {
+		List<WebElement> elements= driver.findElements(By.xpath("/html/body/main/div/div/div[1]/div[1]/div[2]/ul/li[*]/div/div[3]"));
+		driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+		WebElement q;
+		System.out.println(" List of bike");
+		if(elements.size()!=0) {
+		for(int i=0;i<elements.size();i++) {
+			q= elements.get(i);
+		
+			System.out.println((i+1)+"."+q.getText()+"\n");
+		}
+		}
+		else {
+			System.out.println("Element not displayed");
+		}
+		
+	}
+	
 
 	public void getURL(String URL) {
 		driver.get(prop.getProperty(URL));
@@ -152,6 +173,17 @@ public class BaseUI {
 	public void click(String XpathClick) {
 		driver.findElement(By.xpath(XpathClick)).click();
 
+	}
+	
+	public void list() throws InterruptedException {
+		List<WebElement> elements= driver.findElements(By.xpath("//*[@type=\"checkbox\" and @class='carmmCheck']"));
+		System.out.println(elements.size());
+		
+		for(int i=0;i<elements.size();i++) {
+			elements.get(i).click();
+			Thread.sleep(3000);
+		}
+		
 	}
 
 	// Get Element Method

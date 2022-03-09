@@ -1,5 +1,6 @@
 package coms.selenium.hackathon;
 
+import org.openqa.selenium.By;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
@@ -23,7 +24,9 @@ public class TestCases extends BaseUI {
 		mouseover("newBike_Xpath", "UpcommingBike_Xpath");
 		DropDown("dropdown_Xpath");
 		Thread.sleep(5000);
+		 listelement();
 		UsedCar("usedCar_Xpath", "Chennai_Xpath");
+		//list();
 		logger.log(Status.INFO, "Quit the Browser Tab");
 		tearDown();
 		logger.log(Status.PASS, "All test cases pass successfully");
