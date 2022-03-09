@@ -4,6 +4,7 @@ import java.io.File;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -18,12 +19,15 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.hackathon.util.ExtentReportManager;
-
+import java.time.Duration;
 import org.testng.Assert;
+
 
 import com.hackathon.util.DateUtil;
 public class BaseUI {
@@ -65,19 +69,22 @@ public class BaseUI {
 			}
 		}
 	}
-	public void upcomingBike(String newBike_Xpath,String upcomingBike_Xpath) throws InterruptedException {
-		
-		//WebElement newBikeLink= getElement(prop.getProperty(newBike_Xpath));
-		WebElement newBikeLink=driver.findElement(By.xpath(prop.getProperty(newBike_Xpath)));
+	public void hoverMouse(String Xpath) {
+		try {
+		WebElement ElementLink=driver.findElement(By.xpath(prop.getProperty(Xpath)));
 		Actions action = new Actions(driver);
-		action.moveToElement(newBikeLink).build().perform();
-		// use explicit wait in future
-		WebElement upcomingBikes = driver.findElement(By.xpath(prop.getProperty(upcomingBike_Xpath)));
-		upcomingBikes.click();
-		//Thread.sleep(40000);
-		
+		action.moveToElement(ElementLink).build().perform();
+		}
+		catch(Exception e){
+			reportFail(e.getMessage());
+			e.printStackTrace();
+			Assert.fail("Failing the TestCase : " + e.getMessage());
+		}	
+	}
 	
-		
+	public void explicitWait(String xpath) {
+		WebDriverWait wait = new WebDriverWait(driver, 30); 
+		wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath(xpath))));
 	}
 
 	public void getURL(String URL) {
