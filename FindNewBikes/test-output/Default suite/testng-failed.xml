@@ -7,7 +7,6 @@
         <methods>
           <include name="testOne"/>
           <include name="endBrowser"/>
-          <include name="testTwo"/>
         </methods>
       </class> <!-- coms.selenium.hackathon.TestCases -->
     </classes>

@@ -23,8 +23,11 @@ public class TestCases extends BaseUI {
 		getURL("URL");
 		mouseover("newBike_Xpath", "UpcommingBike_Xpath");
 		DropDown("dropdown_Xpath");
+		pageScrollDown();
+		 pageScrollUp();
 		Thread.sleep(5000);
 		 listelement();
+		// pageScrollUp();
 		UsedCar("usedCar_Xpath", "Chennai_Xpath");
 		//list();
 		logger.log(Status.INFO, "Quit the Browser Tab");

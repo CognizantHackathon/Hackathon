@@ -259,8 +259,21 @@ public class BaseUI {
 	public void pageScrollDown() {
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-
-		js.executeScript("window.scrollBy(0,800)");
+        WebElement el = driver.findElement(By.xpath("//*[@id=\"shortlist_2418\"]"));
+		js.executeScript("arguments[0].scrollIntoView();", el);
+		driver.findElement(By.xpath("//*[@id=\"modelList\"]/li[15]/span")).click();
 
 	}
-}
+	public void pageScrollUp() {
+
+
+
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+
+
+
+		js.executeScript("window.scrollBy(0,-800)");
+		}
+		}
+
+
