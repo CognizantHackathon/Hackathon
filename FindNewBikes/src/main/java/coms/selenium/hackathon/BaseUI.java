@@ -137,19 +137,33 @@ public class BaseUI {
 	
 	//display list of bike
 	public void listelement() throws InterruptedException {
-		List<WebElement> elements= driver.findElements(By.xpath("/html/body/main/div/div/div[1]/div[1]/div[2]/ul/li[*]/div/div[3]"));
-		driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
-		WebElement q;
-		System.out.println(" List of bike");
-		if(elements.size()!=0) {
-		for(int i=0;i<elements.size();i++) {
-			q= elements.get(i);
 		
-			System.out.println((i+1)+"."+q.getText()+"\n");
-		}
+		for(int i =1;i<14;i++) {
+		String price = driver.findElement(By.xpath("/html/body/main/div/div/div[1]/div[1]/div[2]/ul/li["+i+"]/div/div[3]/div[1]")).getText();
+		String []arrofstr= price.split(" ");
+		if(Double.parseDouble(arrofstr[1])<4.00) {
+			List<WebElement> elements= driver.findElements(By.xpath("/html/body/main/div/div/div[1]/div[1]/div[2]/ul/li["+i+"]/div/div[3]"));
+
+			driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+			WebElement q;
+			System.out.println(" List of bike");
+		
+			if(elements.size()!=0) {
+			for(int j=0;j<elements.size();j++) {
+				q= elements.get(j);
+				
+				System.out.println((j+1)+"."+q.getText()+"\n");
+				Thread.sleep(3000);
+			}
+			}
+			
 		}
 		else {
-			System.out.println("Element not displayed");
+			System.out.println("out of 400000");
+			Thread.sleep(1000);
+		}
+		
+		
 		}
 		
 	}
