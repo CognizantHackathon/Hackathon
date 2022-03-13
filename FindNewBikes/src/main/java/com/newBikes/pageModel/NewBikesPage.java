@@ -49,25 +49,19 @@ public class NewBikesPage extends baseUI {
 		WebElement drpdown = driver.findElement(By.xpath("//*[@id=\"makeId\"]"));
 		Select name = new Select(drpdown);
 		name.selectByVisibleText("Honda");
-		// WebElement view = driver.findElement(By.xpath("//*[@id=\"modelList\"]/li[15]/span"));
-		 //view.click();
 		Thread.sleep(3000);
 	}
 
-//To print all upcomming less than 4lakh....
+//To print all upcomming less than 4lakh in console..
 	public void printUpcommingBikes() throws InterruptedException {
 
-		List<WebElement> elements = driver
-				.findElements(By.xpath("/html/body/main/div/div/div[1]/div[1]/div[2]/ul/li[*]/div/div[3]"));
-
+		List<WebElement> elements = driver.findElements(By.xpath("/html/body/main/div/div/div[1]/div[1]/div[2]/ul/li[*]/div/div[3]"));
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		WebElement q;
 		System.out.println(" List of bike");
-
 		if (elements.size() != 0) {
 			for (int j = 0; j < elements.size(); j++) {
 				q = elements.get(j);
-
 				System.out.println((j + 1) + "." + q.getText() + "\n");
 				Thread.sleep(3000);
 			}
