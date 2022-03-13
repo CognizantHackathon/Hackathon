@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="coms.selenium.hackathon.TestCases">
+      <class name="com.zigweels.testupcommingbikes.NewBikesTest">
         <methods>
-          <include name="testOne"/>
-          <include name="endBrowser"/>
+          <include name="Test3"/>
+          <include name="endReport"/>
         </methods>
-      </class> <!-- coms.selenium.hackathon.TestCases -->
+      </class> <!-- com.zigweels.testupcommingbikes.NewBikesTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
