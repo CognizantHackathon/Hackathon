@@ -40,10 +40,10 @@ public class NewBikesPage extends baseUI {
 
 //To select "Upcoming Bikes" option through mouse hover
 	public void mouseHover() throws InterruptedException {
-		WebElement newBikes = driver.findElement(By.xpath("//*[@id=\"headerNewNavWrap\"]/nav/div/ul/li[3]/a"));
+		WebElement newBikes = driver.findElement(By.partialLinkText("New Bikes"));
 		Actions builder = new Actions(driver);
 		builder.moveToElement(newBikes).build().perform();
-		WebElement upcomingBikes = driver.findElement(By.xpath("//*[@id=\"headerNewNavWrap\"]/nav/div/ul/li[3]/ul/li[5]/a"));
+		WebElement upcomingBikes =driver.findElement(By.partialLinkText("Upcoming Bikes"));
 		upcomingBikes.click();
 		WebElement drpdown = driver.findElement(By.xpath("//*[@id=\"makeId\"]"));
 		Select name = new Select(drpdown);
@@ -67,4 +67,5 @@ public class NewBikesPage extends baseUI {
 		}
 
 	}
+
 }
