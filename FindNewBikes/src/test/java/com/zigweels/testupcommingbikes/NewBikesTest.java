@@ -2,8 +2,6 @@ package com.zigweels.testupcommingbikes;
 
 
 
-import static org.testng.Assert.assertEquals;
-
 import java.io.IOException;
 
 import org.testng.annotations.Test;
@@ -21,7 +19,6 @@ logger.log(Status.INFO,"Initializing the Browser");
 Load_Home_Page("Chrome");
 logger.log(Status.INFO,"Entering Upcoming Honda Bikes in the search box");
 searchBox1("upcoming honda bikes");
-assertEquals(driver.getTitle(),"Upcoming Honda Bikes in India 2022/23, See Price, Launch Date, Specs @ ZigWheels");
 try {
 takeScreenshot(driver);
 } catch (IOException e) {
@@ -53,7 +50,7 @@ ExtentTest logger=report.createTest("New Bikes Page - Test 3");
 logger.log(Status.INFO,"Initializing the Browser");
 Load_Home_Page("Chrome");
 mouseHover();
-assertEquals(driver.getTitle(),"Upcoming Honda Bikes in India 2022/23, See Price, Launch Date, Specs @ ZigWheels");
+//assertEquals(driver.getTitle(),"Upcoming Honda Bikes in India 2022/23, See Price, Launch Date, Specs @ ZigWheels");
 printUpcommingBikes();
 try {
 takeScreenshot(driver);
