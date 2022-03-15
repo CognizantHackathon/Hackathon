@@ -2,46 +2,46 @@
 <testng-results ignored="8" total="15" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-03-14T22:01:53 IST" name="Default suite" finished-at="2022-03-14T22:05:10 IST" duration-ms="196822">
+  <suite started-at="2022-03-15T15:37:57 IST" name="Default suite" finished-at="2022-03-15T15:40:52 IST" duration-ms="175175">
     <groups>
     </groups>
-    <test started-at="2022-03-14T22:01:53 IST" name="Default test" finished-at="2022-03-14T22:05:10 IST" duration-ms="196822">
+    <test started-at="2022-03-15T15:37:57 IST" name="Default test" finished-at="2022-03-15T15:40:52 IST" duration-ms="175175">
       <class name="com.newBikes.base.baseUI">
-        <test-method is-config="true" signature="endReport()[pri:0, instance:com.newBikes.base.baseUI@18f8cd79]" started-at="2022-03-14T22:05:10 IST" name="endReport" finished-at="2022-03-14T22:05:10 IST" duration-ms="409" status="PASS">
+        <test-method is-config="true" signature="endReport()[pri:0, instance:com.newBikes.base.baseUI@18f8cd79]" started-at="2022-03-15T15:40:52 IST" name="endReport" finished-at="2022-03-15T15:40:53 IST" duration-ms="333" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endReport -->
       </class> <!-- com.newBikes.base.baseUI -->
       <class name="com.zigwheels.testlogin.LoginTest">
-        <test-method signature="testOne()[pri:1, instance:com.zigwheels.testlogin.LoginTest@2bdd8394]" started-at="2022-03-14T22:01:53 IST" name="testOne" finished-at="2022-03-14T22:02:12 IST" duration-ms="18443" status="PASS">
+        <test-method signature="testOne()[pri:1, instance:com.zigwheels.testlogin.LoginTest@2bdd8394]" started-at="2022-03-15T15:37:57 IST" name="testOne" finished-at="2022-03-15T15:38:12 IST" duration-ms="14555" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testOne -->
-        <test-method signature="testTwo()[pri:2, instance:com.zigwheels.testlogin.LoginTest@2bdd8394]" started-at="2022-03-14T22:02:12 IST" name="testTwo" finished-at="2022-03-14T22:02:28 IST" duration-ms="16289" status="PASS">
+        <test-method signature="testTwo()[pri:2, instance:com.zigwheels.testlogin.LoginTest@2bdd8394]" started-at="2022-03-15T15:38:12 IST" name="testTwo" finished-at="2022-03-15T15:38:25 IST" duration-ms="13264" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testTwo -->
-        <test-method signature="testThree()[pri:3, instance:com.zigwheels.testlogin.LoginTest@2bdd8394]" started-at="2022-03-14T22:02:28 IST" name="testThree" finished-at="2022-03-14T22:02:50 IST" duration-ms="21883" status="PASS">
+        <test-method signature="testThree()[pri:3, instance:com.zigwheels.testlogin.LoginTest@2bdd8394]" started-at="2022-03-15T15:38:25 IST" name="testThree" finished-at="2022-03-15T15:38:39 IST" duration-ms="14164" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testThree -->
       </class> <!-- com.zigwheels.testlogin.LoginTest -->
       <class name="com.zigweels.UsedCars.UsedCarTest">
-        <test-method signature="extractUsedCarsModel1()[pri:0, instance:com.zigweels.UsedCars.UsedCarTest@68878f6d]" started-at="2022-03-14T22:02:50 IST" name="extractUsedCarsModel1" finished-at="2022-03-14T22:03:02 IST" duration-ms="12190" status="PASS">
+        <test-method signature="extractUsedCarsModel1()[pri:0, instance:com.zigweels.UsedCars.UsedCarTest@68878f6d]" started-at="2022-03-15T15:38:39 IST" name="extractUsedCarsModel1" finished-at="2022-03-15T15:38:47 IST" duration-ms="8268" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- extractUsedCarsModel1 -->
       </class> <!-- com.zigweels.UsedCars.UsedCarTest -->
       <class name="com.zigweels.testupcommingbikes.NewBikesTest">
-        <test-method signature="Test1()[pri:1, instance:com.zigweels.testupcommingbikes.NewBikesTest@a8ef162]" started-at="2022-03-14T22:03:02 IST" name="Test1" finished-at="2022-03-14T22:03:39 IST" duration-ms="37512" status="PASS">
+        <test-method signature="Test1()[pri:1, instance:com.zigweels.testupcommingbikes.NewBikesTest@a8ef162]" started-at="2022-03-15T15:38:47 IST" name="Test1" finished-at="2022-03-15T15:39:20 IST" duration-ms="32403" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Test1 -->
-        <test-method signature="Test2()[pri:2, instance:com.zigweels.testupcommingbikes.NewBikesTest@a8ef162]" started-at="2022-03-14T22:03:39 IST" name="Test2" finished-at="2022-03-14T22:04:18 IST" duration-ms="38894" status="PASS">
+        <test-method signature="Test2()[pri:2, instance:com.zigweels.testupcommingbikes.NewBikesTest@a8ef162]" started-at="2022-03-15T15:39:20 IST" name="Test2" finished-at="2022-03-15T15:39:58 IST" duration-ms="38582" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Test2 -->
-        <test-method signature="Test3()[pri:3, instance:com.zigweels.testupcommingbikes.NewBikesTest@a8ef162]" started-at="2022-03-14T22:04:18 IST" name="Test3" finished-at="2022-03-14T22:05:10 IST" duration-ms="51563" status="PASS">
+        <test-method signature="Test3()[pri:3, instance:com.zigweels.testupcommingbikes.NewBikesTest@a8ef162]" started-at="2022-03-15T15:39:58 IST" name="Test3" finished-at="2022-03-15T15:40:52 IST" duration-ms="53875" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Test3 -->

@@ -51,6 +51,7 @@ public class NewBikesPage extends baseUI {
 		name.selectByVisibleText("Honda");
 		Thread.sleep(3000);
 	}
+	
 
 //To print all upcomming less than 4lakh in console..
 	public void printUpcommingBikes() throws InterruptedException {
