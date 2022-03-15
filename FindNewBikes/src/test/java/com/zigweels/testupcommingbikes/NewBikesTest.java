@@ -50,7 +50,6 @@ ExtentTest logger=report.createTest("New Bikes Page - Test 3");
 logger.log(Status.INFO,"Initializing the Browser");
 Load_Home_Page("Chrome");
 mouseHover();
-//assertEquals(driver.getTitle(),"Upcoming Honda Bikes in India 2022/23, See Price, Launch Date, Specs @ ZigWheels");
 printUpcommingBikes();
 try {
 takeScreenshot(driver);
