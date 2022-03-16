@@ -20,6 +20,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -60,15 +61,10 @@ driver = new FirefoxDriver();
 
 } else if(browserName.equalsIgnoreCase("Edge")) {
 //Setting up edge driver
-System.setProperty("webdriver.gecko.driver",System.getProperty("user.dir")+"\\src\\test\\resources\\drivers\\IEDriverServer.exe");
-driver = new InternetExplorerDriver();
+System.setProperty("webdriver.edge.driver",System.getProperty("user.dir")+"\\src\\test\\resources\\Drivers\\msedgedriver.exe");
+driver = new EdgeDriver();
 
-} else if(browserName.equalsIgnoreCase("opera")) {
-//Setting up Opera Driver
-System.setProperty("webdriver.opera.driver",System.getProperty("user.dir")+"\\src\\test\\resources\\drivers\\operadriver.exe");
-driver = new OperaDriver();
-
-} else if(browserName.equalsIgnoreCase("safari")) {
+}  else if(browserName.equalsIgnoreCase("safari")) {
 //Setting up Safari driver
 driver = new SafariDriver();
 
