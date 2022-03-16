@@ -34,7 +34,7 @@ public static String path;
 
 protected static ExtentReports report=ExtentReportManager.getReportInstance("Smoke and Regression Suite Report");
 public void invokeBrowser(String browserName) {
-
+//hello
 if(browserName.equalsIgnoreCase("chrome")) {
 //Creating ChromeDriver
 System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"\\src\\test\\resources\\Drivers\\chromedriver.exe");
