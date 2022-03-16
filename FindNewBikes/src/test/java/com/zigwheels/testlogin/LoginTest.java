@@ -63,7 +63,7 @@ public class LoginTest extends LoginPage {
 	@Test(priority = 3)
 	public void testThree() throws Exception {
 		String email = getData(0, 3);
-		setupWebsite("edge");
+		setupWebsite("mozilla");
 		openLoginWindow("Google");
 		enterCredentials(email);
 		String pageTitle = driver.getTitle();

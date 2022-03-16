@@ -20,9 +20,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.opera.OperaDriver;
+import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterSuite;
@@ -48,24 +50,32 @@ options.setExperimentalOption("excludeSwitches", Collections.singletonList("enab
 options.setExperimentalOption("useAutomationExtension", false);
 driver = new ChromeDriver(options);
 
+} else if(browserName.equalsIgnoreCase("mozilla")) {
+//Creating FirefoxDriver
+System.setProperty("webdriver.gecko.driver",System.getProperty("user.dir")+"\\src\\test\\resources\\Drivers\\geckodriver.exe");
+FirefoxProfile profile = new FirefoxProfile();
+//Disabling default proxy in firefox
+profile.setPreference("network.proxy.type", 0);
+driver = new FirefoxDriver();
+
 } else if(browserName.equalsIgnoreCase("Edge")) {
 //Setting up edge driver
-System.setProperty("webdriver.edge.driver",System.getProperty("user.dir")+"\\src\\test\\resources\\Drivers\\msedgedriver.exe");
-driver = new EdgeDriver();
+System.setProperty("webdriver.gecko.driver",System.getProperty("user.dir")+"\\src\\test\\resources\\drivers\\IEDriverServer.exe");
+driver = new InternetExplorerDriver();
 
-} 
-else if(browserName.equalsIgnoreCase("mozilla")) {
-	//Creating FirefoxDriver
-	System.setProperty("webdriver.gecko.driver",System.getProperty("user.dir")+"\\src\\test\\resources\\Drivers\\geckodriver.exe");
-	FirefoxProfile profile = new FirefoxProfile();
-	//Disabling default proxy in firefox
-	profile.setPreference("network.proxy.type", 0);
-	driver = new FirefoxDriver();
+} else if(browserName.equalsIgnoreCase("opera")) {
+//Setting up Opera Driver
+System.setProperty("webdriver.opera.driver",System.getProperty("user.dir")+"\\src\\test\\resources\\drivers\\operadriver.exe");
+driver = new OperaDriver();
 
-	}else if(browserName.equalsIgnoreCase("safari")) {
-}
+} else if(browserName.equalsIgnoreCase("safari")) {
+//Setting up Safari driver
+driver = new SafariDriver();
+
 }
 
+
+}
 
 
 //Method to open a URL

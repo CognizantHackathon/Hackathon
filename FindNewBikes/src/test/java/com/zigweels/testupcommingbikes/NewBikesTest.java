@@ -50,7 +50,6 @@ ExtentTest logger=report.createTest("New Bikes Page - Test 3");
 logger.log(Status.INFO,"Initializing the Browser");
 Load_Home_Page("Chrome");
 mouseHover();
-clickByVisibleElement("//span[@class='zw-cmn-loadMore']");
 printUpcommingBikes();
 try {
 takeScreenshot(driver);
