@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.zigwheels.testlogin.LoginTest">
+      <class name="com.zigweels.testupcommingbikes.NewBikesTest">
         <methods>
-          <include name="testOne"/>
-          <include name="testThree"/>
+          <include name="Test3"/>
           <include name="endReport"/>
         </methods>
-      </class> <!-- com.zigwheels.testlogin.LoginTest -->
+      </class> <!-- com.zigweels.testupcommingbikes.NewBikesTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
