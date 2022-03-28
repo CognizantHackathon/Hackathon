@@ -32,7 +32,7 @@ quitBrowser();
 public void Test2() throws InterruptedException{
 ExtentTest logger=report.createTest("New Bikes Page - Test 2");
 logger.log(Status.INFO,"Initializing the Browser");
-Load_Home_Page("Mozilla");
+Load_Home_Page("edge");
 logger.log(Status.INFO,"Entering Upcoming Honda Bikes in the search box");
 searchBox2("Upcoming Honda Bikes Under 4 Lakhs");
 try {
@@ -50,6 +50,7 @@ ExtentTest logger=report.createTest("New Bikes Page - Test 3");
 logger.log(Status.INFO,"Initializing the Browser");
 Load_Home_Page("Chrome");
 mouseHover();
+clickByVisibleElement("//*[@id=\"modelList\"]/li[14]/span");
 printUpcommingBikes();
 try {
 takeScreenshot(driver);

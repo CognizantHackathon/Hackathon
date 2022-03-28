@@ -5,10 +5,16 @@
     <classes>
       <class name="com.zigweels.testupcommingbikes.NewBikesTest">
         <methods>
-          <include name="Test3"/>
+          <include name="Test2"/>
           <include name="endReport"/>
         </methods>
       </class> <!-- com.zigweels.testupcommingbikes.NewBikesTest -->
+      <class name="com.zigwheels.testlogin.LoginTest">
+        <methods>
+          <include name="testThree"/>
+          <include name="endReport"/>
+        </methods>
+      </class> <!-- com.zigwheels.testlogin.LoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

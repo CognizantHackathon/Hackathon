@@ -1,90 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="8" total="16" passed="7" failed="1" skipped="0">
+<testng-results ignored="8" total="16" passed="6" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-03-16T12:22:24 IST" name="Default suite" finished-at="2022-03-16T12:25:03 IST" duration-ms="159146">
+  <suite started-at="2022-03-28T20:51:42 IST" name="Default suite" finished-at="2022-03-28T20:54:25 IST" duration-ms="162789">
     <groups>
     </groups>
-    <test started-at="2022-03-16T12:22:24 IST" name="Default test" finished-at="2022-03-16T12:25:03 IST" duration-ms="159146">
+    <test started-at="2022-03-28T20:51:42 IST" name="Default test" finished-at="2022-03-28T20:54:25 IST" duration-ms="162789">
       <class name="com.newBikes.base.baseUI">
-        <test-method is-config="true" signature="endReport()[pri:0, instance:com.newBikes.base.baseUI@e3b3b2f]" started-at="2022-03-16T12:25:03 IST" name="endReport" finished-at="2022-03-16T12:25:04 IST" duration-ms="464" status="PASS">
+        <test-method is-config="true" signature="endReport()[pri:0, instance:com.newBikes.base.baseUI@e3b3b2f]" started-at="2022-03-28T20:54:25 IST" name="endReport" finished-at="2022-03-28T20:54:25 IST" duration-ms="355" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endReport -->
       </class> <!-- com.newBikes.base.baseUI -->
       <class name="com.zigwheels.testlogin.LoginTest">
-        <test-method signature="testOne()[pri:1, instance:com.zigwheels.testlogin.LoginTest@2f01783a]" started-at="2022-03-16T12:22:24 IST" name="testOne" finished-at="2022-03-16T12:22:37 IST" duration-ms="13404" status="PASS">
+        <test-method signature="testOne()[pri:1, instance:com.zigwheels.testlogin.LoginTest@2f01783a]" started-at="2022-03-28T20:51:42 IST" name="testOne" finished-at="2022-03-28T20:52:00 IST" duration-ms="17688" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testOne -->
-        <test-method signature="testTwo()[pri:2, instance:com.zigwheels.testlogin.LoginTest@2f01783a]" started-at="2022-03-16T12:22:37 IST" name="testTwo" finished-at="2022-03-16T12:22:48 IST" duration-ms="10676" status="PASS">
+        <test-method signature="testTwo()[pri:2, instance:com.zigwheels.testlogin.LoginTest@2f01783a]" started-at="2022-03-28T20:52:00 IST" name="testTwo" finished-at="2022-03-28T20:52:18 IST" duration-ms="17695" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testTwo -->
-        <test-method signature="testThree()[pri:3, instance:com.zigwheels.testlogin.LoginTest@2f01783a]" started-at="2022-03-16T12:22:48 IST" name="testThree" finished-at="2022-03-16T12:23:09 IST" duration-ms="21032" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testThree -->
-      </class> <!-- com.zigwheels.testlogin.LoginTest -->
-      <class name="com.zigweels.UsedCars.UsedCarTest">
-        <test-method signature="extractUsedCarsModel1()[pri:0, instance:com.zigweels.UsedCars.UsedCarTest@2eea88a1]" started-at="2022-03-16T12:23:09 IST" name="extractUsedCarsModel1" finished-at="2022-03-16T12:23:15 IST" duration-ms="5821" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- extractUsedCarsModel1 -->
-        <test-method signature="extractUsedCarsModel2()[pri:0, instance:com.zigweels.UsedCars.UsedCarTest@2eea88a1]" started-at="2022-03-16T12:23:15 IST" name="extractUsedCarsModel2" finished-at="2022-03-16T12:23:23 IST" duration-ms="7710" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- extractUsedCarsModel2 -->
-      </class> <!-- com.zigweels.UsedCars.UsedCarTest -->
-      <class name="com.zigweels.testupcommingbikes.NewBikesTest">
-        <test-method signature="Test1()[pri:1, instance:com.zigweels.testupcommingbikes.NewBikesTest@78fa769e]" started-at="2022-03-16T12:23:23 IST" name="Test1" finished-at="2022-03-16T12:23:51 IST" duration-ms="28388" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Test1 -->
-        <test-method signature="Test2()[pri:2, instance:com.zigweels.testupcommingbikes.NewBikesTest@78fa769e]" started-at="2022-03-16T12:23:51 IST" name="Test2" finished-at="2022-03-16T12:24:26 IST" duration-ms="34787" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Test2 -->
-        <test-method signature="Test3()[pri:3, instance:com.zigweels.testupcommingbikes.NewBikesTest@78fa769e]" started-at="2022-03-16T12:24:26 IST" name="Test3" finished-at="2022-03-16T12:25:03 IST" duration-ms="37271" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method signature="testThree()[pri:3, instance:com.zigwheels.testlogin.LoginTest@2f01783a]" started-at="2022-03-28T20:52:18 IST" name="testThree" finished-at="2022-03-28T20:52:20 IST" duration-ms="2912" status="FAIL">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="makeId"]"}
-  (Session info: chrome=96.0.4664.110)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+              <![CDATA[Process unexpectedly closed with status 0
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'LTIN291347', ip: '192.168.1.4', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.110, chrome: {chromedriverVersion: 96.0.4664.35 (8df3babf8da8f..., userDataDir: C:\Users\2108710\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:55208}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: ca1498f7e8b822d3f491c7a5b5ea627e
-*** Element info: {Using=xpath, value=//*[@id="makeId"]}]]>
+System info: host: 'LTIN291347', ip: '192.168.1.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: driver.version: FirefoxDriver
+remote stacktrace: ]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="makeId"]"}
-  (Session info: chrome=96.0.4664.110)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+              <![CDATA[org.openqa.selenium.WebDriverException: Process unexpectedly closed with status 0
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'LTIN291347', ip: '192.168.1.4', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.110, chrome: {chromedriverVersion: 96.0.4664.35 (8df3babf8da8f..., userDataDir: C:\Users\2108710\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:55208}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: ca1498f7e8b822d3f491c7a5b5ea627e
-*** Element info: {Using=xpath, value=//*[@id="makeId"]}
+System info: host: 'LTIN291347', ip: '192.168.1.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: driver.version: FirefoxDriver
+remote stacktrace: 
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
+at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at com.newBikes.pageModel.NewBikesPage.mouseHover(NewBikesPage.java:49)
-at com.zigweels.testupcommingbikes.NewBikesTest.Test3(NewBikesTest.java:52)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:147)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:125)
+at com.newBikes.base.baseUI.invokeBrowser(baseUI.java:58)
+at com.newBikes.pageModel.LoginPage.setupWebsite(LoginPage.java:17)
+at com.zigwheels.testlogin.LoginTest.testThree(LoginTest.java:66)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -115,7 +95,105 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testThree -->
+      </class> <!-- com.zigwheels.testlogin.LoginTest -->
+      <class name="com.zigweels.UsedCars.UsedCarTest">
+        <test-method signature="extractUsedCarsModel1()[pri:0, instance:com.zigweels.UsedCars.UsedCarTest@2eea88a1]" started-at="2022-03-28T20:52:20 IST" name="extractUsedCarsModel1" finished-at="2022-03-28T20:52:39 IST" duration-ms="18844" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extractUsedCarsModel1 -->
+        <test-method signature="extractUsedCarsModel2()[pri:0, instance:com.zigweels.UsedCars.UsedCarTest@2eea88a1]" started-at="2022-03-28T20:52:39 IST" name="extractUsedCarsModel2" finished-at="2022-03-28T20:52:50 IST" duration-ms="10608" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extractUsedCarsModel2 -->
+      </class> <!-- com.zigweels.UsedCars.UsedCarTest -->
+      <class name="com.zigweels.testupcommingbikes.NewBikesTest">
+        <test-method signature="Test1()[pri:1, instance:com.zigweels.testupcommingbikes.NewBikesTest@78fa769e]" started-at="2022-03-28T20:52:50 IST" name="Test1" finished-at="2022-03-28T20:53:31 IST" duration-ms="41503" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test1 -->
+        <test-method signature="Test2()[pri:2, instance:com.zigweels.testupcommingbikes.NewBikesTest@78fa769e]" started-at="2022-03-28T20:53:31 IST" name="Test2" finished-at="2022-03-28T20:53:34 IST" duration-ms="2706" status="FAIL">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[Process unexpectedly closed with status 0
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LTIN291347', ip: '192.168.1.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: driver.version: FirefoxDriver
+remote stacktrace: ]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: Process unexpectedly closed with status 0
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LTIN291347', ip: '192.168.1.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: driver.version: FirefoxDriver
+remote stacktrace: 
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
+at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:147)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:125)
+at com.newBikes.base.baseUI.invokeBrowser(baseUI.java:58)
+at com.newBikes.pageModel.NewBikesPage.Load_Home_Page(NewBikesPage.java:18)
+at com.zigweels.testupcommingbikes.NewBikesTest.Test2(NewBikesTest.java:35)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test2 -->
+        <test-method signature="Test3()[pri:3, instance:com.zigweels.testupcommingbikes.NewBikesTest@78fa769e]" started-at="2022-03-28T20:53:34 IST" name="Test3" finished-at="2022-03-28T20:54:25 IST" duration-ms="50777" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Test3 -->
